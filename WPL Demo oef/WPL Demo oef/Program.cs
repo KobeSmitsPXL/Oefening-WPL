@@ -5,17 +5,26 @@
         static void Main(string[] args)
         {
             
-            Console.WriteLine("Wat in je gebruikersnaam?");
-            string userName = Console.ReadLine();
-            Console.WriteLine("Password:");
-            string userPassword = Console.ReadLine();
-
-            if (userName == "Papa" && userPassword == "Papaisdebeste2000")
+            int tries = 0;
+            while (tries < 3)
             {
-                Console.WriteLine("Welkom, admin!");
+                Console.WriteLine("Wat in je gebruikersnaam?");
+                string userName = Console.ReadLine();
+                Console.WriteLine("Password:");
+                string userPassword = Console.ReadLine();
+
+                if (userName == "Papa" && userPassword == "Papaisdebeste2000")
+                {
+                    Console.WriteLine($"Welkom, {userName} !");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine($"Onjuiste gebruikersnaam of wachtwoord. Probeer het opnieuw. ({3 - tries} kansen over)");
+                    tries++;
+                }
+
             }
-            
-            
         }
     }
 }
