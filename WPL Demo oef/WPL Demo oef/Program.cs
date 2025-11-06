@@ -5,6 +5,9 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Wat in je gebruikersnaam?");
+            string userName = Console.ReadLine();
+            Console.WriteLine("Password:");
+            string userPassword = Console.ReadLine();
         }
     }
 }
